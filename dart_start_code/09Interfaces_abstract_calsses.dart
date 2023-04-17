@@ -1,4 +1,4 @@
-// 扩展类（继承） （https://dart.cn/samples#inheritance）
+//接口与抽象类   https://dart.cn/samples#interfaces-and-abstract-classes
 class Spacecraft {
   String name;
 
@@ -23,12 +23,30 @@ class Spacecraft {
   }
 }
 
-class Orbiter extends Spacecraft {
-  double altitude;
+class MockSpaceship implements Spacecraft {
+  @override
+  DateTime? launchDate;
 
-  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+  @override
+  String name;
+
+  MockSpaceship(this.name, this.launchDate);
+
+  @override
+  void describe() {
+    print('Mock Spacecraft: $name');
+  }
+
+  @override
+  int? get launchYear => launchDate?.year;
 }
 
-void main() {
-  print('done');
+abstract class Describable {
+  void describe();
+
+  void describeWithEmphasis() {
+    print('======');
+    describe();
+    print('======');
+  }
 }

@@ -1,4 +1,3 @@
-// 扩展类（继承） （https://dart.cn/samples#inheritance）
 class Spacecraft {
   String name;
 
@@ -22,13 +21,19 @@ class Spacecraft {
     }
   }
 }
+// 在多个类层次结构中重用代码的方法  https://dart.dev/language#mixins 
+mixin Piloted {
+  int astronauts = 1;
 
-class Orbiter extends Spacecraft {
-  double altitude;
-
-  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+  void describeCrew() {
+    print('Number of astronauts: $astronauts');
+  }
 }
 
-void main() {
-  print('done');
+class PilotedCraft extends Spacecraft with Piloted {
+  PilotedCraft(String name, DateTime launchDate) : super(name, launchDate);
+}
+
+void main(){
+
 }
