@@ -1,5 +1,4 @@
-// 类 （https://dart.cn/samples#classes）
-
+// 扩展类（继承） （https://dart.cn/samples#inheritance）
 class Spacecraft {
   String name;
 
@@ -24,10 +23,13 @@ class Spacecraft {
   }
 }
 
-void main() {
-  var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
-  voyager.describe();
+class Orbiter extends Spacecraft {
+  double altitude;
 
-  var voyager3 = Spacecraft.unlaunched('Voyager III');
-  voyager3.describe();
+  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+
+}
+
+void main(){
+  
 }

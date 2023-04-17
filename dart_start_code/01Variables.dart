@@ -1,3 +1,5 @@
+// 变量 （https://dart.cn/samples#variables）
+
 void main() {
   var name = 'Voyager I';
   var year = 1977;
