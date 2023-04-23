@@ -35,5 +35,7 @@ class PilotedCraft extends Spacecraft with Piloted {
 }
 
 void main(){
-
+  var plt = PilotedCraft('神舟1号', DateTime(1999, 11, 20));
+  plt.describe();
+  plt.describeCrew();
 }

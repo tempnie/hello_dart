@@ -50,3 +50,8 @@ abstract class Describable {
     print('======');
   }
 }
+void main() {
+
+  var mock = MockSpaceship('测试飞行器', null);
+  mock.describe();
+}

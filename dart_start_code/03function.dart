@@ -7,5 +7,5 @@ int fibonacci(int n) {
 
 void main() {
   var result = fibonacci(20);
-
+  print('result is $result');
 }

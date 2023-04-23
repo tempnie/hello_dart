@@ -30,5 +30,11 @@ class Orbiter extends Spacecraft {
 }
 
 void main() {
-  print('done');
+   print('\n');
+  print('#' * 40);
+  print('扩展类（继承）');
+  print('#' * 40);
+
+  var obt = Orbiter('天宫号', DateTime(2021, 4, 29), 389.2);
+  obt.describe();
 }

@@ -9,4 +9,6 @@ void main() {
     'tags': ['saturn'],
     'url': '//path/to/saturn.jpg'
   };
+    print(
+      'name is $name, year is $year, antennaDiameter is $antennaDiameter, flybyObjects is $flybyObjects, image is $image');
 }
